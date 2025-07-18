@@ -1,8 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 
-from app.db.engine import init_db
-from app.__inti__ import router
+from db.engine import init_db
+from __inti__ import router
 
 init_db()
 

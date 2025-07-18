@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from user import router as user_router
-from message import router as message_router
+from routers.user import router as user_router
+from routers.message import router as message_router
 
 router = APIRouter()
 router.include_router(user_router)
