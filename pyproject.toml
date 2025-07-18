@@ -8,6 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "fastapi[all] (>=0.116.1,<0.117.0)",
+    "sqlalchemy (>=2.0.41,<3.0.0)"
 ]
 
 

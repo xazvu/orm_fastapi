@@ -1,9 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 
-from db.engine import init_db
-from user import router
-
+from app.db.engine import init_db
+from app.__inti__ import router
 
 init_db()
 
@@ -16,5 +15,5 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8001)
 
