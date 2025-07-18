@@ -2,12 +2,14 @@ import uvicorn
 from fastapi import FastAPI
 
 from db.engine import init_db
-from __inti__ import router
+from routers.message import router as message_router
+from routers.user import router as user_router
 
 init_db()
 
 app = FastAPI()
-app.include_router(router)
+app.include_router(user_router)
+app.include_router(message_router)
 
 @app.get("/", name='home page')
 async def root():
@@ -15,5 +17,5 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8001)
+    uvicorn.run(app, host="127.0.0.1", port=8002)
 
